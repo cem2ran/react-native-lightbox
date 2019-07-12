@@ -43,7 +43,7 @@ export default class Lightbox extends Component {
 
   getContent = () => {
     if(this.props.renderContent) {
-      return this.props.renderContent();
+      return this.props.renderContent(this.state.isOpen);
     } else if(this.props.activeProps) {
       return cloneElement(
         Children.only(this.props.children),
